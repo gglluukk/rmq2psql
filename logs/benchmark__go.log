@@ -1,0 +1,7 @@
+
+rmq2psql --max-bulks 100 --max-reads 10000: #1: 2.430
+rmq2psql --max-bulks 100 --max-reads 10000: #2: 2.524
+rmq2psql --max-bulks 100 --max-reads 10000: #3: 2.468
+rmq2psql --max-bulks 100 --max-reads 10000: #4: 2.441
+rmq2psql --max-bulks 100 --max-reads 10000: #5: 2.537
+Average: 2.480

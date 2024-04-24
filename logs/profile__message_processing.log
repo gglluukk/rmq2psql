@@ -1,0 +1,133 @@
+Wrote profile results to rmq2psql_p.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.0624254 s
+File: ./rmq2psql_p.py
+Function: ujson at line 52
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    52                                                   @profile
+    53                                                   async def ujson(self, message_decoded: str) -> Tuple[str, int]:
+    54     10000      53825.2      5.4     86.2              msg: dict = ujson.loads(message_decoded)
+    55     10000       8600.2      0.9     13.8              return msg['content'], msg['message_number']
+
+Total time: 0.0336433 s
+File: ./rmq2psql_p.py
+Function: orjson at line 57
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    57                                                   @profile
+    58                                                   async def orjson(self, message_decoded: str) -> Tuple[str, int]:
+    59     10000      27512.0      2.8     81.8              msg: dict = orjson.loads(message_decoded)
+    60     10000       6131.3      0.6     18.2              return msg['content'], msg['message_number']
+
+Total time: 0.0289292 s
+File: ./rmq2psql_p.py
+Function: msgspec at line 62
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    62                                                   @profile
+    63                                                   async def msgspec(self, message_decoded: str) -> Tuple[str, int]:
+    64     10000      23016.9      2.3     79.6              msg: dict = msgspec.json.decode(message_decoded)
+    65     10000       5912.3      0.6     20.4              return msg['content'], msg['message_number']
+
+Total time: 0.0224133 s
+File: ./rmq2psql_p.py
+Function: msgspec_struct at line 67
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    67                                                   @profile
+    68                                                   async def msgspec_struct(self, message_decoded: str) -> Tuple[str, int]:
+    69     10000      16751.2      1.7     74.7              msg = msgspec.json.decode(message_decoded, type=Message)
+    70     10000       5662.1      0.6     25.3              return msg.content, msg.message_number
+
+Total time: 0.611187 s
+File: ./rmq2psql_p.py
+Function: rmq_callback at line 73
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    73                                               @profile
+    74                                               async def rmq_callback(
+    75                                                       self, 
+    76                                                       message: aio_pika.IncomingMessage = None,
+    77                                                       flush: bool = False
+    78                                               ) -> None:
+    79     10001       4697.3      0.5      0.8          if not flush:
+    80     10000       8006.1      0.8      1.3              message_decoded = message.body.decode()
+    81                                           
+    82     10000       5756.5      0.6      0.9              if self.json == 'all':
+    83     50000      22439.6      0.4      3.7                  for method_name in self.json_methods:
+    84     40000      21862.7      0.5      3.6                      content, message_number = \
+    85    120000     419842.8      3.5     68.7                      await getattr(self.json_processor, 
+    86     80000      21001.9      0.3      3.4                                    method_name)(message_decoded)
+    87                                                       else:  
+    88                                                           content, message_number = await getattr(self.json_processor, 
+    89                                                                                             self.json)(message_decoded)
+    90                                           
+    91     10000       5332.7      0.5      0.9              self.bulk_messages.append((content, message_number))
+    92     10000       5008.5      0.5      0.8              self.bulk_counter += 1
+    93                                           
+    94     10001       5440.4      0.5      0.9          if self.bulk_counter >= self.max_bulks or (
+    95      9901      19615.8      2.0      3.2                  flush and self.bulk_counter):
+    96       200      10589.7     52.9      1.7              async with self.pgpool.acquire() as connection:
+    97       200      25643.6    128.2      4.2                  async with connection.transaction():
+    98       200      34562.7    172.8      5.7                      await connection.executemany(
+    99       200        232.7      1.2      0.0                          f"INSERT INTO {self.table_name} " + 
+   100       100         35.8      0.4      0.0                           "(content, message_number) VALUES ($1, $2)",
+   101       100         35.3      0.4      0.0                                  self.bulk_messages)
+   102       100       1016.8     10.2      0.2                      self.bulk_messages = []
+   103       100         66.6      0.7      0.0                      self.bulk_counter = 0 
+
+Total time: 1.81599 s
+File: ./rmq2psql_p.py
+Function: main at line 105
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   105                                               @profile
+   106                                               async def main(self) -> None:
+   107         2       7080.8   3540.4      0.4          self.pgpool = await asyncpg.create_pool(
+   108         1          0.6      0.6      0.0                                  host=self.host, port=self.sql_port,
+   109         1          0.4      0.4      0.0                                  user=self.user, password=self.password, 
+   110         1          0.2      0.2      0.0                                  database=self.db_name)
+   111         2        491.0    245.5      0.0          connection = await aio_pika.connect_robust(
+   112         1          1.2      1.2      0.0                                  host=self.host, port=self.rmq_port,
+   113         1          0.5      0.5      0.0                                  login=self.user, password=self.password, 
+   114         1          0.3      0.3      0.0                                  virtualhost=self.vhost)
+   115                                           
+   116         2         63.8     31.9      0.0          async with connection:
+   117         1        442.0    442.0      0.0              channel = await connection.channel()     
+   118         1          2.0      2.0      0.0              if self.loop_type != 'message_processing':
+   119                                                           await channel.set_qos(prefetch_count=self.max_bulks)
+   120         1        205.8    205.8      0.0              queue = await channel.declare_queue(self.queue_name, durable=True)
+   121                                           
+   122         1          1.8      1.8      0.0              if self.loop_type == 'message_processing':
+   123     10000     115672.5     11.6      6.4                  async for message in queue:
+   124     20000     876787.6     43.8     48.3                      async with message.process():
+   125     10000     805622.3     80.6     44.4                          await self.rmq_callback(message=message)
+   126     10000       4587.0      0.5      0.3                          self.read_counter += 1
+   127     10000       5006.7      0.5      0.3                          if self.read_counter >= self.max_reads:
+   128         1          0.3      0.3      0.0                              break
+   129                                                       else:
+   130                                                           if self.loop_type == 'queue_iteration_with_timeout':
+   131                                                               queue_iterator_impl = queue.iterator(timeout=0.1)
+   132                                                           if self.loop_type == 'queue_iteration_without_timeout':
+   133                                                               queue_iterator_impl = queue.iterator()
+   134                                                           try:
+   135                                                               async with queue_iterator_impl as queue_iter:
+   136                                                                   async for message in queue_iter:
+   137                                                                       async with message.process():
+   138                                                                           await self.rmq_callback(message=message) 
+   139                                                                           self.read_counter += 1
+   140                                                                           if self.read_counter >= self.max_reads:
+   141                                                                               break
+   142                                                           except asyncio.TimeoutError:
+   143                                                               print("Exit: no more messages during timeout")
+   144                                           
+   145         1         20.7     20.7      0.0          await self.rmq_callback(flush=True)
+
