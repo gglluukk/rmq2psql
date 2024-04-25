@@ -32,7 +32,7 @@ fi
 
 if [ "$test" == "all" ] || [ $test == "json" ] ; then
     for json in msgspec msgspec_struct orjson ujson ; do
-        consume rmq2psql.py --json --max-bulks $MAX_BULKS $json
+        consume rmq2psql.py --json $json --max-bulks $MAX_BULKS
     done
 fi
 
