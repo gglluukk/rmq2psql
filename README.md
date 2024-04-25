@@ -57,8 +57,8 @@ For per-line `rmq2psql.py` profiling of JSON libraries and RabbitMQ Types Consum
 - **RabbitMQ Types Consuming**:
   - use `message_processing` for optimal performance:
     ```
+            channel.set_qos(prefetch_count=0)
             async for message in queue:
                 async with message.process(ignore_processed, ...):
                     await self.rmq_callback(message=message)
-
     ```

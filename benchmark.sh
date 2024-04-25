@@ -32,14 +32,14 @@ fi
 
 if [ "$test" == "all" ] || [ $test == "json" ] ; then
     for json in msgspec msgspec_struct orjson ujson ; do
-        consume rmq2psql.py --json $json
+        consume rmq2psql.py --json --max-bulks $MAX_BULKS $json
     done
 fi
 
 if [ $test == "all" ] || [ $test == "loop" ] ; then
     for loop_type in message_processing queue_iteration_without_timeout \
                  queue_iteration_with_timeout ; do
-        consume rmq2psql.py --loop-type $loop_type
+        consume rmq2psql.py --loop-type $loop_type --max-bulks $MAX_BULKS
     done
 fi
 
