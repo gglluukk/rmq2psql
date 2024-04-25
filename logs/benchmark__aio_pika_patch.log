@@ -1,75 +1,165 @@
+----------------------------------------------------------------------
 
-rmq2psql.py --loop-type queue_iteration_without_timeout: #1: 4.610
-rmq2psql.py --loop-type queue_iteration_without_timeout: #2: 4.427
-rmq2psql.py --loop-type queue_iteration_without_timeout: #3: 4.321
-rmq2psql.py --loop-type queue_iteration_without_timeout: #4: 4.500
-rmq2psql.py --loop-type queue_iteration_without_timeout: #5: 4.441
-Average: 4.460
+rmq2psql.py --loop-type queue_iteration_without_timeout: #1: 4.432
+rmq2psql.py --loop-type queue_iteration_without_timeout: #2: 4.161
+rmq2psql.py --loop-type queue_iteration_without_timeout: #3: 4.455
+rmq2psql.py --loop-type queue_iteration_without_timeout: #4: 4.583
+rmq2psql.py --loop-type queue_iteration_without_timeout: #5: 4.866
+Average: 4.499
 
-rmq2psql.py --loop-type queue_iteration_with_timeout: #1: 4.506
-rmq2psql.py --loop-type queue_iteration_with_timeout: #2: 4.764
-rmq2psql.py --loop-type queue_iteration_with_timeout: #3: 4.494
-rmq2psql.py --loop-type queue_iteration_with_timeout: #4: 4.861
-rmq2psql.py --loop-type queue_iteration_with_timeout: #5: 4.605
-Average: 4.646
+rmq2psql.py --loop-type queue_iteration_with_timeout: #1: 4.731
+rmq2psql.py --loop-type queue_iteration_with_timeout: #2: 4.577
+rmq2psql.py --loop-type queue_iteration_with_timeout: #3: 4.447
+rmq2psql.py --loop-type queue_iteration_with_timeout: #4: 4.592
+rmq2psql.py --loop-type queue_iteration_with_timeout: #5: 4.794
+Average: 4.628
+----------------------------------------------------------------------
 
-rmq2psql.py --loop-type queue_iteration_without_timeout: #1: 4.503
-rmq2psql.py --loop-type queue_iteration_without_timeout: #2: 4.291
-rmq2psql.py --loop-type queue_iteration_without_timeout: #3: 4.594
-rmq2psql.py --loop-type queue_iteration_without_timeout: #4: 4.601
-rmq2psql.py --loop-type queue_iteration_without_timeout: #5: 4.192
-Average: 4.436
+rmq2psql.py --loop-type queue_iteration_without_timeout: #1: 4.441
+rmq2psql.py --loop-type queue_iteration_without_timeout: #2: 4.515
+rmq2psql.py --loop-type queue_iteration_without_timeout: #3: 4.609
+rmq2psql.py --loop-type queue_iteration_without_timeout: #4: 4.751
+rmq2psql.py --loop-type queue_iteration_without_timeout: #5: 4.731
+Average: 4.609
 
-rmq2psql.py --loop-type queue_iteration_with_timeout: #1: 4.728
-rmq2psql.py --loop-type queue_iteration_with_timeout: #2: 4.579
-rmq2psql.py --loop-type queue_iteration_with_timeout: #3: 4.728
-rmq2psql.py --loop-type queue_iteration_with_timeout: #4: 4.838
-rmq2psql.py --loop-type queue_iteration_with_timeout: #5: 4.686
-Average: 4.712
-
-rmq2psql.py --loop-type queue_iteration_without_timeout: #1: 4.395
-rmq2psql.py --loop-type queue_iteration_without_timeout: #2: 4.451
-rmq2psql.py --loop-type queue_iteration_without_timeout: #3: 4.827
-rmq2psql.py --loop-type queue_iteration_without_timeout: #4: 4.564
-rmq2psql.py --loop-type queue_iteration_without_timeout: #5: 4.563
-Average: 4.560
-
-rmq2psql.py --loop-type queue_iteration_with_timeout: #1: 4.879
-rmq2psql.py --loop-type queue_iteration_with_timeout: #2: 4.812
-rmq2psql.py --loop-type queue_iteration_with_timeout: #3: 4.834
-rmq2psql.py --loop-type queue_iteration_with_timeout: #4: 4.553
-rmq2psql.py --loop-type queue_iteration_with_timeout: #5: 4.488
-Average: 4.713
-
-rmq2psql.py --loop-type queue_iteration_without_timeout: #1: 4.970
-rmq2psql.py --loop-type queue_iteration_without_timeout: #2: 4.523
-rmq2psql.py --loop-type queue_iteration_without_timeout: #3: 4.207
-rmq2psql.py --loop-type queue_iteration_without_timeout: #4: 4.834
-rmq2psql.py --loop-type queue_iteration_without_timeout: #5: 4.290
-Average: 4.565
-
-rmq2psql.py --loop-type queue_iteration_with_timeout: #1: 4.760
+rmq2psql.py --loop-type queue_iteration_with_timeout: #1: 4.768
 rmq2psql.py --loop-type queue_iteration_with_timeout: #2: 4.685
-rmq2psql.py --loop-type queue_iteration_with_timeout: #3: 4.628
-rmq2psql.py --loop-type queue_iteration_with_timeout: #4: 4.532
-rmq2psql.py --loop-type queue_iteration_with_timeout: #5: 4.896
-Average: 4.700
+rmq2psql.py --loop-type queue_iteration_with_timeout: #3: 4.814
+rmq2psql.py --loop-type queue_iteration_with_timeout: #4: 4.545
+rmq2psql.py --loop-type queue_iteration_with_timeout: #5: 4.446
+Average: 4.652
+----------------------------------------------------------------------
 
-rmq2psql.py --loop-type queue_iteration_without_timeout: #1: 4.781
-rmq2psql.py --loop-type queue_iteration_without_timeout: #2: 4.385
-rmq2psql.py --loop-type queue_iteration_without_timeout: #3: 5.151
-rmq2psql.py --loop-type queue_iteration_without_timeout: #4: 4.879
-rmq2psql.py --loop-type queue_iteration_without_timeout: #5: 4.579
-Average: 4.755
+rmq2psql.py --loop-type queue_iteration_without_timeout: #1: 4.399
+rmq2psql.py --loop-type queue_iteration_without_timeout: #2: 4.644
+rmq2psql.py --loop-type queue_iteration_without_timeout: #3: 4.401
+rmq2psql.py --loop-type queue_iteration_without_timeout: #4: 4.660
+rmq2psql.py --loop-type queue_iteration_without_timeout: #5: 4.512
+Average: 4.523
 
-rmq2psql.py --loop-type queue_iteration_with_timeout: #1: 4.666
-rmq2psql.py --loop-type queue_iteration_with_timeout: #2: 4.866
-rmq2psql.py --loop-type queue_iteration_with_timeout: #3: 4.413
-rmq2psql.py --loop-type queue_iteration_with_timeout: #4: 4.703
-rmq2psql.py --loop-type queue_iteration_with_timeout: #5: 5.097
-Average: 4.749
+rmq2psql.py --loop-type queue_iteration_with_timeout: #1: 4.876
+rmq2psql.py --loop-type queue_iteration_with_timeout: #2: 4.914
+rmq2psql.py --loop-type queue_iteration_with_timeout: #3: 4.620
+rmq2psql.py --loop-type queue_iteration_with_timeout: #4: 4.799
+rmq2psql.py --loop-type queue_iteration_with_timeout: #5: 4.798
+Average: 4.801
+----------------------------------------------------------------------
+
+rmq2psql.py --loop-type queue_iteration_without_timeout: #1: 4.705
+rmq2psql.py --loop-type queue_iteration_without_timeout: #2: 4.883
+rmq2psql.py --loop-type queue_iteration_without_timeout: #3: 4.535
+rmq2psql.py --loop-type queue_iteration_without_timeout: #4: 4.770
+rmq2psql.py --loop-type queue_iteration_without_timeout: #5: 4.427
+Average: 4.664
+
+rmq2psql.py --loop-type queue_iteration_with_timeout: #1: 4.647
+rmq2psql.py --loop-type queue_iteration_with_timeout: #2: 4.847
+rmq2psql.py --loop-type queue_iteration_with_timeout: #3: 5.015
+rmq2psql.py --loop-type queue_iteration_with_timeout: #4: 4.573
+rmq2psql.py --loop-type queue_iteration_with_timeout: #5: 4.640
+Average: 4.744
+----------------------------------------------------------------------
+
+rmq2psql.py --loop-type queue_iteration_without_timeout: #1: 4.662
+rmq2psql.py --loop-type queue_iteration_without_timeout: #2: 4.916
+rmq2psql.py --loop-type queue_iteration_without_timeout: #3: 4.355
+rmq2psql.py --loop-type queue_iteration_without_timeout: #4: 4.296
+rmq2psql.py --loop-type queue_iteration_without_timeout: #5: 4.518
+Average: 4.549
+
+rmq2psql.py --loop-type queue_iteration_with_timeout: #1: 4.862
+rmq2psql.py --loop-type queue_iteration_with_timeout: #2: 4.641
+rmq2psql.py --loop-type queue_iteration_with_timeout: #3: 4.846
+rmq2psql.py --loop-type queue_iteration_with_timeout: #4: 5.110
+rmq2psql.py --loop-type queue_iteration_with_timeout: #5: 5.004
+Average: 4.893
+----------------------------------------------------------------------
+
+rmq2psql.py --loop-type queue_iteration_without_timeout: #1: 4.762
+rmq2psql.py --loop-type queue_iteration_without_timeout: #2: 4.481
+rmq2psql.py --loop-type queue_iteration_without_timeout: #3: 4.616
+rmq2psql.py --loop-type queue_iteration_without_timeout: #4: 4.553
+rmq2psql.py --loop-type queue_iteration_without_timeout: #5: 4.799
+Average: 4.642
+
+rmq2psql.py --loop-type queue_iteration_with_timeout: #1: 4.980
+rmq2psql.py --loop-type queue_iteration_with_timeout: #2: 4.823
+rmq2psql.py --loop-type queue_iteration_with_timeout: #3: 4.797
+rmq2psql.py --loop-type queue_iteration_with_timeout: #4: 4.625
+rmq2psql.py --loop-type queue_iteration_with_timeout: #5: 4.979
+Average: 4.841
+----------------------------------------------------------------------
+
+rmq2psql.py --loop-type queue_iteration_without_timeout: #1: 4.657
+rmq2psql.py --loop-type queue_iteration_without_timeout: #2: 4.272
+rmq2psql.py --loop-type queue_iteration_without_timeout: #3: 4.215
+rmq2psql.py --loop-type queue_iteration_without_timeout: #4: 4.538
+rmq2psql.py --loop-type queue_iteration_without_timeout: #5: 4.197
+Average: 4.376
+
+rmq2psql.py --loop-type queue_iteration_with_timeout: #1: 4.703
+rmq2psql.py --loop-type queue_iteration_with_timeout: #2: 4.718
+rmq2psql.py --loop-type queue_iteration_with_timeout: #3: 4.543
+rmq2psql.py --loop-type queue_iteration_with_timeout: #4: 4.969
+rmq2psql.py --loop-type queue_iteration_with_timeout: #5: 4.962
+Average: 4.779
+----------------------------------------------------------------------
+
+rmq2psql.py --loop-type queue_iteration_without_timeout: #1: 5.153
+rmq2psql.py --loop-type queue_iteration_without_timeout: #2: 4.490
+rmq2psql.py --loop-type queue_iteration_without_timeout: #3: 4.608
+rmq2psql.py --loop-type queue_iteration_without_timeout: #4: 4.562
+rmq2psql.py --loop-type queue_iteration_without_timeout: #5: 4.218
+Average: 4.606
+
+rmq2psql.py --loop-type queue_iteration_with_timeout: #1: 5.042
+rmq2psql.py --loop-type queue_iteration_with_timeout: #2: 4.770
+rmq2psql.py --loop-type queue_iteration_with_timeout: #3: 4.693
+rmq2psql.py --loop-type queue_iteration_with_timeout: #4: 4.659
+rmq2psql.py --loop-type queue_iteration_with_timeout: #5: 4.569
+Average: 4.747
+----------------------------------------------------------------------
+
+rmq2psql.py --loop-type queue_iteration_without_timeout: #1: 4.455
+rmq2psql.py --loop-type queue_iteration_without_timeout: #2: 4.691
+rmq2psql.py --loop-type queue_iteration_without_timeout: #3: 4.288
+rmq2psql.py --loop-type queue_iteration_without_timeout: #4: 4.666
+rmq2psql.py --loop-type queue_iteration_without_timeout: #5: 4.445
+Average: 4.509
+
+rmq2psql.py --loop-type queue_iteration_with_timeout: #1: 4.690
+rmq2psql.py --loop-type queue_iteration_with_timeout: #2: 4.565
+rmq2psql.py --loop-type queue_iteration_with_timeout: #3: 4.828
+rmq2psql.py --loop-type queue_iteration_with_timeout: #4: 4.868
+rmq2psql.py --loop-type queue_iteration_with_timeout: #5: 4.918
+Average: 4.774
+----------------------------------------------------------------------
+
+rmq2psql.py --loop-type queue_iteration_without_timeout: #1: 4.410
+rmq2psql.py --loop-type queue_iteration_without_timeout: #2: 4.410
+rmq2psql.py --loop-type queue_iteration_without_timeout: #3: 4.235
+rmq2psql.py --loop-type queue_iteration_without_timeout: #4: 4.457
+rmq2psql.py --loop-type queue_iteration_without_timeout: #5: 4.445
+Average: 4.391
+
+rmq2psql.py --loop-type queue_iteration_with_timeout: #1: 4.685
+rmq2psql.py --loop-type queue_iteration_with_timeout: #2: 4.697
+rmq2psql.py --loop-type queue_iteration_with_timeout: #3: 4.843
+rmq2psql.py --loop-type queue_iteration_with_timeout: #4: 4.771
+rmq2psql.py --loop-type queue_iteration_with_timeout: #5: 4.565
+Average: 4.712
 
 # cat benchmark__aio_pika_patch.log | grep ^Ave | awk '{ print $2; }' | \
 # awk '{if(NR % 2 == 1){odd=$1}else{even=$1} if(NR % 2 == 0)
 # {printf "%.2f\n", odd / even}}'
+# 0.97
+# 0.99
+# 0.94
+# 0.98
+# 0.93
+# 0.96
+# 0.92
+# 0.97
+# 0.94
+# 0.93
 

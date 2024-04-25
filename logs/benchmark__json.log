@@ -1,28 +1,28 @@
 
-rmq2psql.py --json msgspec: #1: 3.531
-rmq2psql.py --json msgspec: #2: 3.405
-rmq2psql.py --json msgspec: #3: 3.808
-rmq2psql.py --json msgspec: #4: 3.517
-rmq2psql.py --json msgspec: #5: 3.485
-Average: 3.549
+rmq2psql.py --json msgspec: #1: 3.639
+rmq2psql.py --json msgspec: #2: 3.446
+rmq2psql.py --json msgspec: #3: 3.725
+rmq2psql.py --json msgspec: #4: 3.916
+rmq2psql.py --json msgspec: #5: 3.466
+Average: 3.638
 
-rmq2psql.py --json msgspec_struct: #1: 3.617
-rmq2psql.py --json msgspec_struct: #2: 3.557
-rmq2psql.py --json msgspec_struct: #3: 3.570
-rmq2psql.py --json msgspec_struct: #4: 3.556
-rmq2psql.py --json msgspec_struct: #5: 3.516
-Average: 3.563
+rmq2psql.py --json msgspec_struct: #1: 3.766
+rmq2psql.py --json msgspec_struct: #2: 3.727
+rmq2psql.py --json msgspec_struct: #3: 3.678
+rmq2psql.py --json msgspec_struct: #4: 3.585
+rmq2psql.py --json msgspec_struct: #5: 3.453
+Average: 3.642
 
-rmq2psql.py --json orjson: #1: 3.450
-rmq2psql.py --json orjson: #2: 3.715
-rmq2psql.py --json orjson: #3: 3.529
-rmq2psql.py --json orjson: #4: 3.554
-rmq2psql.py --json orjson: #5: 3.511
-Average: 3.552
+rmq2psql.py --json orjson: #1: 3.601
+rmq2psql.py --json orjson: #2: 3.597
+rmq2psql.py --json orjson: #3: 3.799
+rmq2psql.py --json orjson: #4: 3.515
+rmq2psql.py --json orjson: #5: 3.547
+Average: 3.612
 
-rmq2psql.py --json ujson: #1: 3.635
-rmq2psql.py --json ujson: #2: 3.508
-rmq2psql.py --json ujson: #3: 3.633
-rmq2psql.py --json ujson: #4: 3.542
-rmq2psql.py --json ujson: #5: 3.619
-Average: 3.587
+rmq2psql.py --json ujson: #1: 3.533
+rmq2psql.py --json ujson: #2: 3.914
+rmq2psql.py --json ujson: #3: 3.991
+rmq2psql.py --json ujson: #4: 3.544
+rmq2psql.py --json ujson: #5: 3.721
+Average: 3.741

@@ -13,7 +13,7 @@ Each [benchmark](benchmark.sh) conducts 10,000 reads from RabbitMQ and executes 
 
 ```
 rmq2psql    (Golang)                        | 2.480
-rmq2psql.py (Python, best of)               | 3.549
+rmq2psql.py (Python, best of)               | 3.612
 
 ```
 * with [golang/rmq2psql/rmq2psql.go](golang/rmq2psql/rmq2psql.go) and [rmq2psql.py](rmq2psql.py)
@@ -21,19 +21,19 @@ rmq2psql.py (Python, best of)               | 3.549
 
 ### Python JSON libraries
 ```
-rmq2psql.py (Python, msgspec)               | 3.549
-rmq2psql.py (Python, msgspec_struct)        | 3.563
-rmq2psql.py (Python, orjson)                | 3.552
-rmq2psql.py (Python, ujson)                 | 3.587
+rmq2psql.py (Python, msgspec)               | 3.638
+rmq2psql.py (Python, msgspec_struct)        | 3.642
+rmq2psql.py (Python, orjson)                | 3.612
+rmq2psql.py (Python, ujson)                 | 3.741
 ```
 * see [logs/benchmark__json.log](logs/benchmark__json.log)
 
 
 ### Python RabbitMQ Types Consuming
 ```
-rmq2psql.py (Python, message processing)    | 3.725
-rmq2psql.py (Python, queue without timeout) | 4.445
-rmq2psql.py (Python, queue with timeout)    | 4.644
+rmq2psql.py (Python, message processing)    | 3.717
+rmq2psql.py (Python, queue without timeout) | 4.564
+rmq2psql.py (Python, queue with timeout)    | 4.742
 ```
 
 * see [logs/benchmark__loop.log](logs/benchmark__loop.log)
