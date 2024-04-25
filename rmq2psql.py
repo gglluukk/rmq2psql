@@ -115,8 +115,11 @@ class RMQProcessor:
                                 virtualhost=self.vhost)
 
         async with connection:
-            channel = await connection.channel()     
-            await channel.set_qos(prefetch_count=self.max_bulks)
+            channel = await connection.channel()
+            if self.loop_type == 'message_processing':
+                await channel.set_qos(prefetch_count=0)
+            else:
+                await channel.set_qos(prefetch_count=self.max_bulks)
             queue = await channel.declare_queue(self.queue_name, durable=True)
 
             if self.loop_type == 'message_processing':
